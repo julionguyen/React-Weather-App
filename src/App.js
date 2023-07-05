@@ -1,10 +1,13 @@
-import logo from './logo.svg';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom";
 import './App.css';
 import ProductPrice from './ProductPrice';
 import './ProductPrice.css';
 
 function App() {
   return (
+    <Router basename='/React-Weather-App'>
+    <Switch>
+    <Router path="/:path(|react-weather-app)">
     <div>
       <h1>Fancy Florist</h1>
       <ProductPrice
@@ -22,7 +25,10 @@ function App() {
         description="Beautiful collection of flowers to turn heads on your special day!"
         price={200}  sale={true}
         photo="https://t4.ftcdn.net/jpg/01/85/39/85/240_F_185398545_GGbrJYgw65pQd2PIdXkxBRqBHfmkU8Ka.jpg"/>
-    </div>  );
+    </div>  )
+          </Router>
+          </Switch>
+          </Router>
 }
 
 export default App;
